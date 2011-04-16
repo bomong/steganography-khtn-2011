@@ -24,7 +24,15 @@ bool checkDoublicate(Word temp)
 	}
 	return false;
 }
-
+void Word::Cal_WL()
+{
+	this->Wl =1;
+}
+	
+void Word::Cal_SD()
+{
+	this->SD =1;
+}
 void main ()
 {
 	ifstream infile;
@@ -39,7 +47,7 @@ void main ()
 		getline(infile, line);
 		str = new char[line.length()+1];
 		convert(str,line);
-		str[line.length()] = '\0';
+		str[line.length()] =NULL;
 
 		temp = strtok (str," ");
 		wTemp.content=temp;
@@ -49,7 +57,7 @@ void main ()
 			temp = strtok (NULL, " ");
 			wTemp.content = temp;
 			bool Check = checkDoublicate(wTemp);
-			if (!Check)
+			if (!Check || temp!=NULL)
 			{
 				ListofWords.push_back(wTemp);
 				wTemp.content.SetString(_T(""));
@@ -57,5 +65,10 @@ void main ()
 		}
 	}
 	delete [] str;
+	for (int i=0; i<ListofWords.size();i++)
+	{
+		ListofWords[i].Cal_WL();
+		ListofWords[i].Cal_SD();
+	}
 	infile.close();
 }
