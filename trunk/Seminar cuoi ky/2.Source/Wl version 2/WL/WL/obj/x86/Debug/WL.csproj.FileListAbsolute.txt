@@ -3,3 +3,5 @@ c:\users\tran van dat\documents\visual studio 2010\Projects\WL\WL\bin\Debug\WL.e
 c:\users\tran van dat\documents\visual studio 2010\Projects\WL\WL\bin\Debug\WL.pdb
 c:\users\tran van dat\documents\visual studio 2010\Projects\WL\WL\obj\x86\Debug\WL.exe
 c:\users\tran van dat\documents\visual studio 2010\Projects\WL\WL\obj\x86\Debug\WL.pdb
+C:\Users\Tran Van Dat\Desktop\New folder\Seminar cuoi ky\2.Source\Wl version 2\WL\WL\obj\x86\Debug\WL.exe
+C:\Users\Tran Van Dat\Desktop\New folder\Seminar cuoi ky\2.Source\Wl version 2\WL\WL\obj\x86\Debug\WL.pdb

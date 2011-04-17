@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace WL
 {
@@ -119,16 +120,8 @@ namespace WL
             }
             return totalSD2;
         }
-        static float Cal_VarSD(List<Word> ListofWords)
+        static float Cal_VarSD(List<Word> ListofWords, float avg_SD, float fN)
         {
-            int N; // giá trị N' trong công thứ (c)
-            N = 0;
-            foreach (Word item in ListofWords)
-            {
-                N += item.WL.Count;
-            }
-            float fN = (float)N;
-            float avg_SD;
             avg_SD = Cal_AvgSD(ListofWords,fN);
 
             float total_VarSD;
@@ -142,15 +135,50 @@ namespace WL
         //--------MAIN-------------------------------------------------------------------------------
         static void Main(string[] args)
         {
-            List<Word> ListofWords = new List<Word>();
+            StreamWriter outfile = new StreamWriter("GoodData_output.txt"); // chổ này đổi cái tên lại để có out put khác nhau
+            for (int i = 1; i < 118; i++)
+            {
+                List<Word> ListofWords = new List<Word>();
+                string t = ".txt";
+                string fileName= null;
+                fileName += "good data training (";  // thay đổi cho phù hợp tên đầu vào
+                fileName += i.ToString();
+                fileName += ")"; // thay đổi sao cho phù hợp tên đầu vào
+                fileName += t;
 
-            string text = System.IO.File.ReadAllText("text.txt");
-            string[] ListTemp = text.Split(' ', ',', ' ', '.', '!', ';','\r', '\n');
-            InitListofWord(ListTemp, ListofWords);
-            ModifyList_V1(ListofWords);
-            Cal_SD(ListofWords);
-            ModifyList_V2(ListofWords);
-            float VarSD = Cal_VarSD(ListofWords);
+                string text = System.IO.File.ReadAllText(fileName);
+                string[] ListTemp = text.Split(' ', ',', ' ', '.', '!', ';', '\r', '\n','?');
+                InitListofWord(ListTemp, ListofWords);
+                ModifyList_V1(ListofWords);
+                Cal_SD(ListofWords);
+                ModifyList_V2(ListofWords);
+
+                int N; // giá trị N' trong công thứ (c)
+                N = 0;
+                foreach (Word item in ListofWords)
+                {
+                    N += item.WL.Count;
+                }
+                float fN = (float)N;
+                float avgSD = Cal_AvgSD(ListofWords, N);
+                Console.Write("ID: ");
+                outfile.Write("ID: ");
+                Console.Write(i);
+                outfile.Write(i);
+                Console.Write(" avgSD= ");
+                outfile.Write(" avgSD= ");
+                Console.Write(avgSD);
+                outfile.Write(avgSD);
+                Console.Write("\t\t VarSD= ");
+                outfile.Write("\t\t VarSD= ");
+                float VarSD = Cal_VarSD(ListofWords, avgSD,fN);
+
+                Console.WriteLine(VarSD);
+                outfile.WriteLine(VarSD);
+            }
+            
+
+            
         }
     }
 }
