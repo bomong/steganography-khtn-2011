@@ -32,14 +32,14 @@ int Debug;
 
 struct OHT *htable;
 
-extern void init_words();
-extern void msg_to_txt();
-extern void uu_to_txt();
-extern void pgp_to_txt();
-extern void txt_to_uu();
-extern void txt_to_pgp();
-extern int comp_entries();
-extern int get_index();
-extern void print_entry();
+void init_words();
+void msg_to_txt();
+void uu_to_txt();
+void pgp_to_txt();
+void txt_to_uu();
+void txt_to_pgp();
+int comp_entries();
+int get_index();
+void print_entry();
 
 #endif
