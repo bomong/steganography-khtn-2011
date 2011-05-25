@@ -1,0 +1,9 @@
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\bin\Release\WL_V2.exe
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\bin\Release\WL_V2.pdb
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\obj\x86\Release\WL_V2.Form1.resources
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\obj\x86\Release\WL_V2.Properties.Resources.resources
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\obj\x86\Release\WL_V2.exe
+C:\Users\Tran Van Dat\documents\visual studio 2010\Projects\WL_V2\WL_V2\obj\x86\Release\WL_V2.pdb
