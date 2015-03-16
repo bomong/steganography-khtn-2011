@@ -1,0 +1,1 @@
+Teamwork in the course of steganography and watermarking, in 8th semester ,2011. 2 project in this course : watermarking in DFT, and text-based steganography .
